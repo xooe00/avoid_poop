@@ -23,7 +23,7 @@
 2. 프로젝트 폴더에서 아래 명령으로 필요한 모듈을 설치합니다.
 
    ```bash
-   pip install -r requirements.txt
+   py -m pip install -r requirements.txt
    ```
 
 ---
@@ -53,3 +53,4 @@
 
 3. 게임 창이 뜨면 플레이를 시작하면 됩니다.
 4. 게임 종료시 닉네임, 얻은 점수와 레벨이 표시됩니다.
+
