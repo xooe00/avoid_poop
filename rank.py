@@ -32,21 +32,21 @@ class Top3:
             self.sorted_df = pd.read_csv(self.path).sort_values(by='score', ascending=False, ignore_index=True)
 
             if len(self.sorted_df) >= 3:
-                rank1 = f'1등: {self.sorted_df['username'][0]}, 점수: {self.sorted_df['score'][0]}, 최고 레벨:{self.sorted_df['level'][0]}'
-                rank2 = f'2등: {self.sorted_df['username'][1]}, 점수: {self.sorted_df['score'][1]}, 최고 레벨:{self.sorted_df['level'][1]}'
-                rank3 = f'3등: {self.sorted_df['username'][2]}, 점수: {self.sorted_df['score'][2]}, 최고 레벨:{self.sorted_df['level'][2]}'
+                rank1 = f"1등: {self.sorted_df['username'][0]}, 점수: {self.sorted_df['score'][0]}, 최고 레벨:{self.sorted_df['level'][0]}"
+                rank2 = f"2등: {self.sorted_df['username'][1]}, 점수: {self.sorted_df['score'][1]}, 최고 레벨:{self.sorted_df['level'][1]}"
+                rank3 = f"3등: {self.sorted_df['username'][2]}, 점수: {self.sorted_df['score'][2]}, 최고 레벨:{self.sorted_df['level'][2]}"
                 return rank1, rank2, rank3
             
             elif len(self.sorted_df) == 2:
-                rank1 = f'1등: {self.sorted_df['username'][0]}, 점수: {self.sorted_df['score'][0]}, 최고 레벨:{self.sorted_df['level'][0]}'
-                rank2 = f'2등: {self.sorted_df['username'][1]}, 점수: {self.sorted_df['score'][1]}, 최고 레벨:{self.sorted_df['level'][1]}'
-                rank3 = '3등:'
+                rank1 = f"1등: {self.sorted_df['username'][0]}, 점수: {self.sorted_df['score'][0]}, 최고 레벨:{self.sorted_df['level'][0]}"
+                rank2 = f"2등: {self.sorted_df['username'][1]}, 점수: {self.sorted_df['score'][1]}, 최고 레벨:{self.sorted_df['level'][1]}"
+                rank3 = "3등:"
                 return rank1, rank2, rank3
             
             elif len(self.sorted_df) == 1:
-                rank1 = f'1등: {self.sorted_df['username'][0]}, 점수: {self.sorted_df['score'][0]}, 최고 레벨:{self.sorted_df['level'][0]}'
-                rank2 = '2등:'
-                rank3 = '3등:'
+                rank1 = f"1등: {self.sorted_df['username'][0]}, 점수: {self.sorted_df['score'][0]}, 최고 레벨:{self.sorted_df['level'][0]}"
+                rank2 = "2등:"
+                rank3 = "3등:"
                 return rank1, rank2, rank3
 
             elif len(self.sorted_df) == 0:
